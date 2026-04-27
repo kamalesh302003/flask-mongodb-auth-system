@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            Login Page
+        </title>
+        <link rel="stylesheet" href="{{url_for('static',filename='css/style1.css')}}"/>
+    </head>
+    <h1><b><i><u>User Login Page</u></i></b></h1>
+    <body>
+        <form action="/login" method="POST">
+            <b><label for="username">Username:</label></b>  <br>
+            <input type="text" id="username" name="Username">  <br><br>
+            <b><label for="password">Password:</label></b>   <br>
+            <input type="password" id="password" name="Password">  <br><br>
+            <input type="submit" name="Submit" value="Login" > 
+            <a href="/register">
+            <button type="button">Register</button>
+            </a>
+            <script src="{{url_for('static',filename='js/script1.js')}}">
+            </script>  
+        </form>
+    </body>
+</html>
