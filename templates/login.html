@@ -1,23 +1,33 @@
-<html>
-    <head>
-        <title>
-            Login Page
-        </title>
-        <link rel="stylesheet" href="{{url_for('static',filename='css/style1.css')}}"/>
-    </head>
-    <h1><b><i><u>User Login Page</u></i></b></h1>
-    <body>
-        <form action="/login" method="POST">
-            <b><label for="username">Username:</label></b>  <br>
-            <input type="text" id="username" name="Username">  <br><br>
-            <b><label for="password">Password:</label></b>   <br>
-            <input type="password" id="password" name="Password">  <br><br>
-            <input type="submit" name="Submit" value="Login" > 
-            <a href="/register">
-            <button type="button">Register</button>
-            </a>
-            <script src="{{url_for('static',filename='js/script1.js')}}">
-            </script>  
-        </form>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="auth-card">
+            <div class="auth-icon">👤</div>
+            <h1>Login</h1>
+
+            <form action="/login" method="POST" class="auth-form">
+                <label class="input-group">
+                    <span class="input-icon">👤</span>
+                    <input type="text" name="Username" placeholder="Username" required>
+                </label>
+                <label class="input-group">
+                    <span class="input-icon">🔒</span>
+                    <input type="password" name="Password" placeholder="Password" required>
+                </label>
+                <button type="submit" class="primary-button">Login</button>
+            </form>
+
+            <p class="helper-text">
+                Don't have an account? <a href="/register">Register</a>
+            </p>
+        </div>
+    </div>
+</body>
 </html>

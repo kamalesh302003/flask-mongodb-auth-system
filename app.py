@@ -42,7 +42,7 @@ def login():
     user = users.find_one({"Username": username, "Password": password})
 
     if user:
-        session["Username"] = username
+        session["username"] = username
         return redirect("/dashboard")
     else:
         return "Invalid Login!"
@@ -61,4 +61,4 @@ def logout():
     return redirect("/")
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)

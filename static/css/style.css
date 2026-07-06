@@ -1,11 +1,145 @@
-h1{
-    background-color: rgb(134, 181, 241);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+* {
+    box-sizing: border-box;
 }
-body{
-    background-color: rgb(101, 201, 143);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 300;
-    font-style: oblique;
-    font-size: medium;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.15), transparent 40%),
+                linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+    color: #0f172a;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.page-wrapper {
+    width: 100%;
+    max-width: 420px;
+}
+
+.auth-card,
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 32px;
+    box-shadow: 0 32px 80px rgba(15, 23, 42, 0.1);
+    padding: 36px 28px;
+    backdrop-filter: blur(12px);
+}
+
+.auth-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
+    color: white;
+    font-size: 30px;
+}
+
+.auth-card h1,
+.dashboard-card h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+    color: #0f172a;
+}
+
+.auth-form {
+    margin-top: 24px;
+    display: grid;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid #dbeafe;
+    background: #f8fafc;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #0f172a;
+    background: transparent;
+}
+
+.input-icon {
+    font-size: 1.1rem;
+    color: #475569;
+}
+
+.primary-button,
+.secondary-button {
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-button {
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    color: #ffffff;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    transform: translateY(-1px);
+}
+
+.primary-button:hover {
+    box-shadow: 0 18px 30px rgba(59, 130, 246, 0.24);
+}
+
+.secondary-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8fafc;
+    color: #1f2937;
+    text-decoration: none;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.helper-text {
+    margin: 20px 0 0;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.helper-text a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.helper-text a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-card p {
+    margin: 20px 0 0;
+    color: #475569;
+    text-align: center;
+    line-height: 1.6;
 }
